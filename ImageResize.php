@@ -6,7 +6,7 @@
 
 
 interface ImageConstants{
-    const IMAGE_PATH = '/var/www/api_cleancopy/test/images/';
+    const IMAGE_PATH = '/var/www/test/images/';
 }
 
 
