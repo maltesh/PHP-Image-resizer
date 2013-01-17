@@ -52,7 +52,6 @@ class ImageResize implements ImageConstants {
         $this->image_height   = imagesy($this->image_resource);
         $this->image_width    = imagesx($this->image_resource);
         $this->setImageType(exif_imagetype($this->path));
-        //Image type will be 2 or 3 since we are supporting only png,jpeg,jpg
     }
 
     public function getImageWidth(){
@@ -82,6 +81,7 @@ class ImageResize implements ImageConstants {
 //            case IMAGETYPE_BMP:
 //                //6
 //                return 'bmp';
+//                Refer PHP manual
             default:
                 break;
         }
@@ -109,7 +109,6 @@ class ImageResize implements ImageConstants {
 
         $random_string = $this->getRandomString();
         $path = self::IMAGE_PATH.$random_string.'.'.$this->getImageType();
-        echo $image_convert_function. '=====\n';
         $image_convert_function($this->new_image_resource,$path);
     }
 
